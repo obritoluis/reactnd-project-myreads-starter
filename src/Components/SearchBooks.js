@@ -47,7 +47,7 @@ class SerchBooks extends Component {
   }
 
   render() {
-    const { searchResults } = this.state
+    const { query, searchResults } = this.state
     const { changeShelf } = this.props
 
     return (
@@ -67,14 +67,20 @@ class SerchBooks extends Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-            {searchResults && searchResults.length > 0 && searchResults.map((book) => (
-              <Book
-                key={book.id}
-                book={book}
-                currentShelf={this.currentShelf(book.id)}
-                changeShelf={changeShelf}
-              />
-            ))}
+            {
+              (searchResults && !searchResults.error)
+                ? searchResults.map((book) => (
+                    <Book
+                      key={book.id}
+                      book={book}
+                      currentShelf={this.currentShelf(book.id)}
+                      changeShelf={changeShelf}
+                    />
+                  ))
+                : <div>
+                    No books found
+                  </div>
+            }
           </ol>
         </div>
       </div>
