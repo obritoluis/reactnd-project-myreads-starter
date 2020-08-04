@@ -47,7 +47,7 @@ class SerchBooks extends Component {
   }
 
   render() {
-    const { query, searchResults } = this.state
+    const { searchResults } = this.state
     const { changeShelf } = this.props
 
     return (
