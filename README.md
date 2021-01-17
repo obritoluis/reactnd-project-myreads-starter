@@ -1,6 +1,8 @@
 # MyReads Project
 
-This is the Luís Brito's MyReads project for Udacity's React Fundamentals course.
+This is Luís Brito's MyReads project for Udacity's React Fundamentals course.
+
+Check it live on <a href="https://reactnd-project-myreads-starter-nine.vercel.app/" target="_blank">Vercel</a>
 
 ## TL;DR
 
